@@ -1,38 +1,89 @@
-.App {
+.Tuner {
   text-align: center;
+  background: linear-gradient(180deg, #f5faea 0%, #b4dce1 100%),
+    linear-gradient(0deg, #ffffff, #ffffff);
+  height: 600px;
+  width: 420px;
+  border-radius: 16px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tuner-heading {
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #16161b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.onAudioText {
+  font-family: monospace;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  color: #39393d;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.guitarImg {
+  height: auto;
+  width: 300px;
+  position: absolute;
+  bottom: 0%;
+  left: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.strings {
+  padding: 10px;
+  background-color: ivory;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+#E {
+  position: absolute;
+  left: 40px;
+  top: 440px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#A {
+  position: absolute;
+  left: 40px;
+  top: 380px;
+}
+
+#D {
+  position: absolute;
+  left: 40px;
+  top: 320px;
+}
+#G {
+  position: absolute;
+  right: 40px;
+  top: 320px;
+}
+#B {
+  position: absolute;
+  right: 40px;
+  top: 380px;
+}
+#E1 {
+  position: absolute;
+  right: 40px;
+  top: 440px;
 }
