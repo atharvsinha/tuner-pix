@@ -1,23 +1,22 @@
-function Strings(){
-    const stringList = ['E', 'A', 'D', 'G', 'B', 'E1'];
+const stringList = ["E", "A", "D", "G", "B", "E1"];
 
-    let stringObject = [];
+const temp = [];
 
-    stringList.forEach(string=>{
-        stringObject.push({id:string, text:string.charAt(0)})
-    })
-    
-    const String = ({id, text}) => {return(
-            <div className="strings" id={id}>{text}</div>
-    )}
-    return(
-        <>
-        {stringObject.map((item)=>{
-            return (<String key={item.id} {...item} />)
-        })}
-        </>
-    )
-    
-}
+stringList.forEach((string) => {
+  temp.push({
+    id: string,
+    text: string.charAt(0),
+    className1: "strings",
+    className2: "random",
+  });
+});
 
-export default Strings;
+export const stringObject = temp;
+
+export default String = ({ id, text, className1, className2 }) => {
+  return (
+    <div className={className1} id={id}>
+      <div className={className2}>{text}</div>
+    </div>
+  );
+};

@@ -1,52 +1,88 @@
-import './App.css';
-import guitarImg from './img/GuitarHeadTuner.svg'
-import Strings from './components/strings';
-import OnAudioText from './components/onAudioText';
-import Bars from './components/bars';
-import updatePitch from './utils';
-import { PitchDetector} from 'pitchy';
+import "./App.css";
+import guitarImg from "./img/GuitarHeadTuner.svg";
+import String from "./components/strings";
+import Button from "./components/button/button";
+import { PitchDetector, Autocorrelator } from "pitchy";
+import { audioContext } from "./components/button/button";
+import { useState, useEffect } from "react";
+import { setValues } from "./utils/utils";
+import { stringObject } from "./components/strings";
+import barObject from "./components/barsObject";
+audioContext.suspend();
 
 function App() {
+  const [text, setText] = useState({
+    instruction: "",
+    text: "",
+    className: "OnAudioInstruction",
+  });
+  const [stringData, setStringData] = useState(stringObject);
+  const [bar, setBar] = useState(barObject);
+  const analyserNode = audioContext.createAnalyser();
 
-  navigator.mediaDevices.getUserMedia({audio:true})
-  document.addEventListener("DOMContentLoaded", () => {
-    
-    
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    const audioContext = new AudioContext();
-    const analyserNode = audioContext.createAnalyser();
-    
-    document.querySelector('div.Tuner').addEventListener('click', function() {
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
-        console.log('Started reading audio')
-    } }, false);
+  useEffect(() => {
+    getMedia();
+  }, []);
 
-    
+  async function getMedia() {
+    let stream = null;
+    stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    audioContext.createMediaStreamSource(stream).connect(analyserNode);
+    const detector = PitchDetector.forFloat32Array(analyserNode.fftSize);
+    const input = new Float32Array(detector.inputLength);
 
-    
+    const getPitch = () => {
+      analyserNode.getFloatTimeDomainData(input);
+      const [pitch, clarity] = detector.findPitch(
+        input,
+        audioContext.sampleRate
+      );
+      const temp = setValues(pitch, clarity);
+      if (
+        temp.text.instruction !== undefined &&
+        temp.text.text !== undefined &&
+        temp.text.className !== undefined
+      ) {
+        setText({
+          className: temp.text.className,
+          text: temp.text.text,
+          instruction: temp.text.instruction,
+        });
+        setStringData(temp.string);
+      }
+    };
 
-    navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
-        let sourceNode = audioContext.createMediaStreamSource(stream);
-        sourceNode.connect(analyserNode);
-        const detector = PitchDetector.forFloat32Array(analyserNode.fftSize);
-        const input = new Float32Array(detector.inputLength);
-        updatePitch(analyserNode, detector, input, audioContext.sampleRate);
-    });
-});
+    window.setInterval(() => getPitch(), 50);
+  }
+
+  // getMedia();
 
   return (
     <div className="Tuner" id="tuner">
-      <h3 className="tuner-heading">Guitar Tuner</h3>
-      <OnAudioText />
-      <Strings/>
-      <Bars/>
-      <img className="guitarImg" src={guitarImg} alt="Guitar Icon"/>
-               
-    </div>
+      <div className="heading">Guitar Tuner</div>
+      <Button />
 
+      {stringData.map((item) => {
+        return (
+          <String
+            key={item.id}
+            id={item.id}
+            text={item.text}
+            className1={item.className1}
+            className2={item.className2}
+          />
+        );
+      })}
+      {bar.map((item) => {
+        return (
+          <div className={item.className} id={item.id} style={item.style}></div>
+        );
+      })}
+      <div className={text.className}>{text.text}</div>
+      <div className="onAudioInstruction">{text.instruction}</div>
+      <img className="guitarImg" src={guitarImg} alt="Guitar Icon" />
+    </div>
   );
 }
 
 export default App;
- 
