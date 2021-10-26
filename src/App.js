@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { setValues } from "./utils/utils";
 import { stringObject } from "./components/strings";
 import barObject from "./components/barsObject";
+
 audioContext.suspend();
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
       }
     };
 
-    window.setInterval(() => getPitch(), 50);
+    window.setInterval(() => getPitch(), 100);
   }
 
   // getMedia();
