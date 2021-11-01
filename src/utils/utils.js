@@ -86,7 +86,7 @@ export const setValues = (pitch, clarity) => {
         });
       } else stringReturn.push(item);
     });
-    if (Math.abs(centVal) < 7.5) {
+    if (Math.abs(centVal) < 5) {
       textReturn = {
         instruction: "Congrats 🎉",
         text: "You tuned the guitar!",
