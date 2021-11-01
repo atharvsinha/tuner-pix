@@ -50,6 +50,32 @@ body {
   position: relative;
   /* top: 15px; */
 }
+.onAudioRight#cents {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #64b936;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  top: 25px;
+}
+.onAudioWrong#cents {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #e25757;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  top: 25px;
+}
 .onAudioInstruction {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
@@ -62,6 +88,9 @@ body {
   padding-right: 30px;
   position: relative;
   top: 15px;
+}
+.onNull {
+  font-size: 0px;
 }
 .guitarImg {
   height: auto;

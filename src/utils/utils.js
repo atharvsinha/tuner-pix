@@ -91,23 +91,26 @@ export const setValues = (pitch, clarity) => {
         instruction: "Congrats 🎉",
         text: "You tuned the guitar!",
         className: "onAudioRight",
+        cents: centVal,
       };
     } else if (centVal < -5) {
       textReturn = {
         instruction: "Tighent the string a bit!",
         text: "Low",
         className: "onAudioWrong",
+        cents: centVal,
       };
     } else if (centVal > 5) {
       textReturn = {
         instruction: "Loosen the string a bit!",
         text: "High",
         className: "onAudioWrong",
+        cents: centVal,
       };
     }
   }
   //   barStructure.map((item)=>{
 
   //   })
-  return { text: textReturn, string: stringReturn };
+  return { text: textReturn, string: stringReturn, cents: centVal };
 };

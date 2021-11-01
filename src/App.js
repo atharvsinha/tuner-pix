@@ -15,12 +15,11 @@ function App() {
   const [text, setText] = useState({
     instruction: "",
     text: "",
-    className: "OnAudioInstruction",
+    className: "onNull",
   });
   const [stringData, setStringData] = useState(stringObject);
   const [bar, setBar] = useState(barObject);
   const analyserNode = audioContext.createAnalyser();
-
   useEffect(() => {
     getMedia();
   }, []);
@@ -48,6 +47,7 @@ function App() {
           className: temp.text.className,
           text: temp.text.text,
           instruction: temp.text.instruction,
+          cents: temp.text.cents,
         });
         setStringData(temp.string);
       }
@@ -81,6 +81,10 @@ function App() {
       })}
       <div className={text.className}>{text.text}</div>
       <div className="onAudioInstruction">{text.instruction}</div>
+      <div className={text.className} id="cents">
+        {Math.round(text.cents)}
+      </div>
+
       <img className="guitarImg" src={guitarImg} alt="Guitar Icon" />
     </div>
   );
