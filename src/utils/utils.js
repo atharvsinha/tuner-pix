@@ -75,7 +75,7 @@ export const setValues = (pitch, clarity) => {
   let stringReturn = [];
   const note = notes[noteIndex];
 
-  if (clarity > 0.97 && pitch > 50) {
+  if (clarity > 0.98 && pitch > 50) {
     stringObject.map((item) => {
       if (item.id == note) {
         stringReturn.push({
@@ -92,13 +92,13 @@ export const setValues = (pitch, clarity) => {
         text: "You tuned the guitar!",
         className: "onAudioRight",
       };
-    } else if (centVal < -7.5) {
+    } else if (centVal < -5) {
       textReturn = {
         instruction: "Tighent the string a bit!",
         text: "Low",
         className: "onAudioWrong",
       };
-    } else if (centVal > 7.5) {
+    } else if (centVal > 5) {
       textReturn = {
         instruction: "Loosen the string a bit!",
         text: "High",

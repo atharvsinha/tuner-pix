@@ -53,7 +53,7 @@ function App() {
       }
     };
 
-    window.setInterval(() => getPitch(), 100);
+    window.setInterval(() => getPitch(), 50);
   }
 
   // getMedia();
