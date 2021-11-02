@@ -5,29 +5,13 @@ nBars.forEach((i) => {
     barObject.push({
       id: barObject.length,
       value: i,
-      className: `bars${i}`,
-      style: {
-        position: "absolute",
-        width: " 6px",
-        height: " 80px",
-        top: " 205px",
-        background: " #cecece",
-        left: `${barObject.length * 21 + 18}px`,
-      },
+      className: `bars${barObject.length}`,
     });
   } else {
     barObject.push({
       id: barObject.length,
       value: i,
-      className: `bars${i}`,
-      style: {
-        position: "absolute",
-        width: " 6px",
-        height: " 40px",
-        top: " 225px",
-        background: " #cecece",
-        left: `${barObject.length * 21 + 18}px`,
-      },
+      className: `bars${barObject.length}`,
     });
   }
 });

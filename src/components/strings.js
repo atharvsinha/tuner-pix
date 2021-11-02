@@ -13,10 +13,12 @@ stringList.forEach((string) => {
 
 export const stringObject = temp;
 
-export default String = ({ id, text, className1, className2 }) => {
+const String = ({ id, text, className1, className2 }) => {
   return (
     <div className={className1} id={id}>
       <div className={className2}>{text}</div>
     </div>
   );
 };
+
+export default String;

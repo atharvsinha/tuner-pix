@@ -50,32 +50,7 @@ body {
   position: relative;
   /* top: 15px; */
 }
-.onAudioRight#cents {
-  font-family: "Source Sans Pro", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 25px;
-  text-align: center;
-  color: #64b936;
-  padding-left: 30px;
-  padding-right: 30px;
-  position: relative;
-  top: 25px;
-}
-.onAudioWrong#cents {
-  font-family: "Source Sans Pro", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 25px;
-  text-align: center;
-  color: #e25757;
-  padding-left: 30px;
-  padding-right: 30px;
-  position: relative;
-  top: 25px;
-}
+
 .onAudioInstruction {
   font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
@@ -223,151 +198,151 @@ body {
   position: absolute;
   width: 6px;
   height: 80px;
-  top: 225px;
+  top: 205px;
   background: #cecece;
-  left: 11 px;
+  left: 5%;
 }
 .bars1 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 32 px;
+  left: 10%;
 }
 .bars2 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 53px;
+  left: 15%;
 }
 .bars3 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 74px;
+  left: 20%;
 }
 .bars4 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 95x;
+  left: 25%;
 }
 .bars5 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 116px;
+  left: 30%;
 }
 .bars6 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 137px;
+  left: 35%;
 }
 .bars7 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 158px;
+  left: 40%;
 }
 .bars8 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 179px;
+  left: 45%;
 }
 .bars9 {
   position: absolute;
   width: 6px;
   height: 80px;
-  top: 225px;
+  top: 205px;
   background: #cecece;
-  left: 200px;
+  left: 50%;
 }
 .bars10 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 221px;
+  left: 55%;
 }
 .bars11 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 242px;
+  left: 60%;
 }
 .bars12 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 263px;
+  left: 65%;
 }
 .bars13 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 284px;
+  left: 70%;
 }
 .bars14 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 305px;
+  left: 75%;
 }
 .bars15 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 326px;
+  left: 80%;
 }
 .bars16 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 347px;
+  left: 85%;
 }
 .bars17 {
   position: absolute;
   width: 6px;
   height: 40px;
-  top: 205px;
+  top: 225px;
   background: #cecece;
-  left: 368px;
+  left: 90%;
 }
 .bars18 {
   position: absolute;
   width: 6px;
   height: 80px;
-  top: 225px;
+  top: 205px;
   background: #cecece;
-  left: 389px;
+  left: 95%;
 }

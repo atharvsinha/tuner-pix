@@ -17,7 +17,7 @@ export const setValues = (pitch, clarity) => {
   let stringReturn = [];
   const note = notes[noteIndex];
 
-  if (clarity > 0.95 && pitch > 50) {
+  if (clarity > 0.97 && pitch > 50) {
     stringObject.map((item) => {
       if (item.id === note) {
         stringReturn.push({

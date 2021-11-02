@@ -1,21 +1,17 @@
 import { initialState, onClickState, onEnterHover } from "./buttonData";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const AudioContext = window.AudioContext || window.webkitAudioContext;
 export const audioContext = new AudioContext();
 
-audioContext.suspend();
-
 export default function Button() {
   const [startButton, setStartButton] = useState(initialState);
-  const [text, setText] = useState("");
   const handleClick = () => {
     setStartButton(onClickState);
     if (audioContext.state === "suspended") {
       audioContext.resume();
       console.log("Started reading audio");
     } else console.log("not started");
-    setText("Pluck a string!");
   };
   const handleEnterHover = () => {
     setStartButton(onEnterHover);
