@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tuner-pix/static/css/main.cdc5ef94.chunk.css",
-    "main.js": "/tuner-pix/static/js/main.3c5a5f2d.chunk.js",
-    "main.js.map": "/tuner-pix/static/js/main.3c5a5f2d.chunk.js.map",
+    "main.js": "/tuner-pix/static/js/main.6e110283.chunk.js",
+    "main.js.map": "/tuner-pix/static/js/main.6e110283.chunk.js.map",
     "runtime-main.js": "/tuner-pix/static/js/runtime-main.1820b6b0.js",
     "runtime-main.js.map": "/tuner-pix/static/js/runtime-main.1820b6b0.js.map",
     "static/js/2.136698ea.chunk.js": "/tuner-pix/static/js/2.136698ea.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.1820b6b0.js",
     "static/js/2.136698ea.chunk.js",
     "static/css/main.cdc5ef94.chunk.css",
-    "static/js/main.3c5a5f2d.chunk.js"
+    "static/js/main.6e110283.chunk.js"
   ]
 }
