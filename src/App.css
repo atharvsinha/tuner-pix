@@ -197,8 +197,8 @@ body {
 .bars0 {
   position: absolute;
   width: 6px;
-  height: 80px;
-  top: 205px;
+  height: 40px;
+  top: 225px;
   background: #cecece;
   left: 5%;
 }
@@ -341,8 +341,8 @@ body {
 .bars18 {
   position: absolute;
   width: 6px;
-  height: 80px;
-  top: 205px;
+  height: 40px;
+  top: 225px;
   background: #cecece;
   left: 95%;
 }

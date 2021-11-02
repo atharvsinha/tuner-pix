@@ -355,7 +355,7 @@ function App() {
               );
           }
         }
-        return null;
+        return <div className={item.className}></div>;
       })}
       <div className={text.className}>{text.text}</div>
       <div className="onAudioInstruction">{text.instruction}</div>
