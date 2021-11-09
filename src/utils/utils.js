@@ -29,21 +29,21 @@ export const setValues = (pitch, clarity) => {
       } else stringReturn.push(item);
       return null;
     });
-    if (Math.abs(centVal) < 5) {
+    if (Math.abs(centVal) < 10) {
       textReturn = {
         instruction: "Congrats 🎉",
         text: "String tuned!",
         className: "onAudioRight",
         cents: centVal,
       };
-    } else if (centVal < -5) {
+    } else if (centVal < -10) {
       textReturn = {
         instruction: "Tighent the string a bit!",
         text: "Low",
         className: "onAudioWrong",
         cents: centVal,
       };
-    } else if (centVal > 5) {
+    } else if (centVal > 10) {
       textReturn = {
         instruction: "Loosen the string a bit!",
         text: "High",

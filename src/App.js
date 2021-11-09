@@ -73,15 +73,15 @@ function App() {
         );
       })}
       {barObject.map((item) => {
-        if (Math.abs(text.cents) <= 5)
+        if (Math.abs(text.cents) <= 10)
           return (
             <div
               className={item.className}
               style={{ backgroundColor: "#64B936" }}
             ></div>
           );
-        else if (text.cents < -5) {
-          if (text.cents > -7) {
+        else if (text.cents < -10) {
+          if (text.cents > -12) {
             if (Number(item.id) === 8 || Number(item.id) === 9)
               return (
                 <div
@@ -96,7 +96,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents > -37) {
+          } else if (text.cents > -42) {
             if (item.id >= 7 && item.id <= 9)
               return (
                 <div
@@ -111,7 +111,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents > -67) {
+          } else if (text.cents > -72) {
             if (Number(item.id) <= 9 && Number(item.id) >= 6)
               return (
                 <div
@@ -126,7 +126,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents > -97) {
+          } else if (text.cents > -102) {
             if (Number(item.id) <= 9 && Number(item.id) >= 5)
               return (
                 <div
@@ -141,7 +141,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents > -127) {
+          } else if (text.cents > -132) {
             if (Number(item.id) <= 9 && Number(item.id) >= 4)
               return (
                 <div
@@ -156,7 +156,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents > -157) {
+          } else if (text.cents > -162) {
             if (Number(item.id) <= 9 && Number(item.id) >= 3)
               return (
                 <div
@@ -171,7 +171,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents > -187) {
+          } else if (text.cents > -192) {
             if (Number(item.id) <= 9 && Number(item.id) >= 2)
               return (
                 <div
@@ -186,7 +186,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents > -217) {
+          } else if (text.cents > -222) {
             if (Number(item.id) <= 9 && Number(item.id) >= 1)
               return (
                 <div
@@ -201,7 +201,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents < -217) {
+          } else if (text.cents < -222) {
             if (Number(item.id) <= 9 && Number(item.id) >= 0)
               return (
                 <div
@@ -217,8 +217,8 @@ function App() {
                 ></div>
               );
           }
-        } else if (text.cents > 5) {
-          if (text.cents < 7) {
+        } else if (text.cents > 10) {
+          if (text.cents < 12) {
             if (Number(item.id) <= 10 && Number(item.id) >= 9)
               return (
                 <div
@@ -233,7 +233,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents < 37) {
+          } else if (text.cents < 42) {
             if (item.id >= 9 && item.id <= 11)
               return (
                 <div
@@ -248,7 +248,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents < 67) {
+          } else if (text.cents < 72) {
             if (Number(item.id) <= 12 && Number(item.id) >= 9)
               return (
                 <div
@@ -263,7 +263,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents < 97) {
+          } else if (text.cents < 102) {
             if (Number(item.id) <= 13 && Number(item.id) >= 9)
               return (
                 <div
@@ -278,7 +278,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents < 127) {
+          } else if (text.cents < 132) {
             if (Number(item.id) <= 14 && Number(item.id) >= 9)
               return (
                 <div
@@ -293,7 +293,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents < 157) {
+          } else if (text.cents < 162) {
             if (Number(item.id) <= 15 && Number(item.id) >= 9)
               return (
                 <div
@@ -308,7 +308,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents < 187) {
+          } else if (text.cents < 192) {
             if (Number(item.id) <= 16 && Number(item.id) >= 9)
               return (
                 <div
@@ -323,7 +323,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents < 217) {
+          } else if (text.cents < 222) {
             if (Number(item.id) <= 17 && Number(item.id) >= 9)
               return (
                 <div
@@ -338,7 +338,7 @@ function App() {
                   style={{ backgroundColor: "#D7D3D3" }}
                 ></div>
               );
-          } else if (text.cents > 217) {
+          } else if (text.cents > 222) {
             if (Number(item.id) <= 18 && Number(item.id) >= 9)
               return (
                 <div
