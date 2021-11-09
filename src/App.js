@@ -82,6 +82,7 @@ function App() {
       <div className={text.className}>{text.text}</div>
       <div className="onAudioInstruction">{text.instruction}</div>
       <img className="guitarImg" src={guitarImg} alt="Guitar Icon" />
+      <div></div>
     </div>
   );
 }
